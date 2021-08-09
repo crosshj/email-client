@@ -1,0 +1,148 @@
+:root {
+    --bg1: #eee;
+    --bg2: white;
+    --mdl-blue: #2196f3;
+}
+
+body * { font-family: 'Roboto'; }
+i { cursor: pointer; }
+
+.app {
+    width: 100vw;
+    height: 100vh;
+}
+.center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bg1);
+}
+
+.center > div {
+    max-width: 20em;
+    margin: auto;
+}
+
+.login > div {
+    background: var(--bg2);
+    padding: 2em;
+    border-radius: 5px;
+}
+
+#html-spinner{
+    width:40px;
+    height:40px;
+    border:4px solid var(--mdl-blue);
+    border-top:4px solid transparent;
+    border-radius:50%;
+}
+
+#html-spinner, #svg-spinner{
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1.2s;
+    -webkit-animation-name: rotate;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+    -moz-transition-property: -moz-transform;
+    -moz-animation-name: rotate;
+    -moz-animation-duration: 1.2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+
+    transition-property: transform;
+    animation-name: rotate;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(360deg);}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.mdl-navigation__link {
+    user-select: none;
+    cursor: pointer;
+}
+
+a.mdl-navigation__link.is-selected {
+    background: var(--bg1);
+    font-weight: bold;
+}
+
+.page-content { padding: 2em; }
+
+.messages-list table { width: 100%; }
+
+.email-header {
+    display: flex;
+    justify-content: space-between;
+}
+.email-header .actions {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: auto;
+}
+.email-header .actions .date {
+    margin-right: 1em;
+    opacity: 0.9;
+}
+.email-header h1,
+.email-header h2,
+.email-header h3,
+.email-header h4,
+.email-header h5 {
+    margin: 0.1em;
+}
+.message-view .body {
+    font-size: 1.35em;
+    white-space: pre-wrap;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    line-height: 1.5em;
+}
+.message-view i+i {
+    margin-left: 1em;
+}
+.message-view button+button {
+    margin-left: 1em;
+}
+.message-view .reply {
+    border: 1px solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+.message-view .reply textarea {
+    resize: none;
+    width: auto;
+    border: 0;
+    height: 20em;
+    padding: 1em;
+    font-size: 1.25em;
+    background: var(--bg1);
+    margin-top: 1em;
+}
+.message-view .reply .actions {
+    padding: 1em;
+    margin-left: auto;
+}

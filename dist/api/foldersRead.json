@@ -1,5 +1,5 @@
 {
-	inbox: [
+	"Inbox": [
 		{
 			"message-id": "123abc",
 			"from": "Jane Doe",
@@ -21,7 +21,7 @@
 			"subject": "New Compiler Version Available"
 		}
 	],
-	trash: [
+	"Trash": [
 		{
 			"message-id": "999999",
 			"from": "Acme Corp",

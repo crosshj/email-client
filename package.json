@@ -1,0 +1,35 @@
+{
+  "name": "email-client",
+  "version": "1.0.0",
+  "description": "basic email client",
+  "main": "server/index.js",
+  "scripts": {
+    "watch": "webpack --watch --config client/webpack.config.js",
+    "server": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crosshj/email-client.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crosshj/email-client/issues"
+  },
+  "homepage": "https://github.com/crosshj/email-client#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^9.0.1",
+    "json-server": "^0.16.3",
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2"
+  }
+}

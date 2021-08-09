@@ -2,6 +2,7 @@ import React from 'react';
 
 const MessageView = ({
 	message,
+	currentFolder,
 	deleteMessage,
 	selectMessage,
 	sendMessage,
@@ -12,6 +13,7 @@ const MessageView = ({
 		id, body, date, from, "reply-to": reply,
 		starred, subject, to
 	} = message;
+	const isTrash = currentFolder === 'Trash';
 	const [showReply, setShowReply] = React.useState(false);
 	const triggerSendMessage = () => {
 		const body = 'TODO: get text from reply textarea';
@@ -35,13 +37,15 @@ const MessageView = ({
 					</div>
 					<div className="actions">
 						<span className="date">{date}</span>
-						<span>
-							{ starred
-								? <i className="material-icons" onClick={starMessage}>star</i>
-								: <i className="material-icons" onClick={starMessage}>star_outline</i>
-							}
-							<i className="material-icons" onClick={() => setShowReply(true)}>reply</i>
-						</span>
+						{ isTrash &&
+							<span>
+								{ starred
+									? <i className="material-icons" onClick={starMessage}>star</i>
+									: <i className="material-icons" onClick={starMessage}>star_outline</i>
+								}
+								<i className="material-icons" onClick={() => setShowReply(true)}>reply</i>
+							</span>
+						}
 					</div>
 				</div>
 				<div className="body">{body}</div>

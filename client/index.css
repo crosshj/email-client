@@ -87,7 +87,7 @@ a.mdl-navigation__link.is-selected {
     font-weight: bold;
 }
 
-.page-content { padding: 2em; }
+.page-content { padding: 0.5em; }
 
 .messages-list table { width: 100%; }
 

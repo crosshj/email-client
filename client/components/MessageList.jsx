@@ -6,7 +6,7 @@ const MessageList = ({ currentFolder="Inbox", foldersRead, selectMessage }) => {
 	if(!messages.length){
 		return (
 			<div className="messages-list">
-				No messages in this folder
+				{currentFolder}: No messages in this folder
 			</div>
 		);
 	}

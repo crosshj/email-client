@@ -13,11 +13,12 @@ see [demo](https://crosshj.com/email-client/)
 
 1) server is very basic and tied mainly to just one user
 2) login is basically fake: any username or password will work
-3) no UI for settings, including filters
-4) no UI for contacts
-5) no way to create a message from scratch, only reply
-6) stars, reply, and delete messages are not connected to any real action
-7) tests are non-existant
-8) state handling is very basic, would probably use redux
-9) little effort has been placed on optimizing (re-)renders and props being passed
+3) logout does not exist, there is no indication in UI who current user is
+4) no UI for settings, including filters
+5) no UI for contacts
+6) no way to create a message from scratch, only reply
+7) stars, reply, and delete messages are not connected to any real action
+8) tests are non-existant
+9) state handling is very basic, would probably use redux
+10) little effort has been placed on optimizing (re-)renders and props being passed
 

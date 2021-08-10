@@ -37,7 +37,7 @@ const MessageView = ({
 					</div>
 					<div className="actions">
 						<span className="date">{date}</span>
-						{ isTrash &&
+						{ !isTrash &&
 							<span>
 								{ starred
 									? <i className="material-icons" onClick={starMessage}>star</i>

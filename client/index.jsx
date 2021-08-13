@@ -31,11 +31,11 @@ const App = () => {
             mdl-layout--fixed-header">
 				<Header />
 				<SideBar {...actions} {...state} />
-				<main className="mdl-layout__content">
+				<div className="mdl-layout__content">
 					<div className="page-content">
 						<Content {...actions} {...state} />
 					</div>
-				</main>
+				</div>
 			</div>
 		</div>
 	);

@@ -1,3 +1,7 @@
+const baseHref = document.location.href.includes('/::preview::/')
+    ? '..'
+    : '.';
+
 const api = [
     'contacts',
     'filters',
@@ -7,7 +11,7 @@ const api = [
     'settings'
 ];
 
-const fetchAPI = (apiName) => fetch(`./api/${apiName}.json`)
+const fetchAPI = (apiName) => fetch(`${baseHref}/api/${apiName}.json`)
     .then(x => x.json());
 
 const getNetwork = (apis) => Promise.all(apis.map(fetchAPI))

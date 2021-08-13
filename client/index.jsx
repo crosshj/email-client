@@ -27,8 +27,11 @@ const App = () => {
 
 	return (
 		<div className="app">
-			<div className="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
-            mdl-layout--fixed-header">
+			<div className="mdl-layout
+				mdl-js-layout
+				mdl-layout--fixed-drawer
+				mdl-layout--fixed-header"
+			>
 				<Header />
 				<SideBar {...actions} {...state} />
 				<div className="mdl-layout__content">
